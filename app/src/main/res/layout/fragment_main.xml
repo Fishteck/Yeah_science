@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/fragment_main_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:indeterminate="true"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_main_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.main.MainFragment">
+
+        <FrameLayout
+            android:id="@+id/fragment_main_today_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <ImageView
+                android:id="@+id/fragment_main_today_image"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="300dp"
+                />
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/fragment_main_today_video"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:autoPlay="false"
+                app:showFullScreenButton="true"
+                android:visibility="gone"
+                />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/fragment_main_today_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/fragment_main_today_block"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/extra_large_text"
+            android:layout_marginTop="@dimen/medium_margin" />
+
+        <TextView
+            android:id="@+id/fragment_main_today_explanation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/fragment_main_today_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/medium_text"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
+
+</ScrollView>

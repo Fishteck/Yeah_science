@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="android.example.yeahscience.ui.main.MainFragment"
+        android:label="Frame today"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_ISSInfoFragment"
+            app:destination="@id/ISSInfoFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_spaceXInfoFragment"
+            app:destination="@id/spaceXInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/spaceXRocketsFragment"
+        android:name="android.example.yeahscience.ui.spaceXRockets.SpaceXRocketsFragment"
+        android:label="fragment_space_x_rockets"
+        tools:layout="@layout/fragment_space_x_rockets" >
+        <action
+            android:id="@+id/action_spaceXRocketsFragment_to_spaceXRocketDetailFragment"
+            app:destination="@id/spaceXRocketDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/spaceXRocketDetailFragment"
+        android:name="android.example.yeahscience.ui.spaceXRocketDetail.SpaceXRocketDetailFragment"
+        android:label="fragment_space_x_rocket_detail"
+        tools:layout="@layout/fragment_space_x_rocket_detail" />
+    <fragment
+        android:id="@+id/spaceXInfoFragment"
+        android:name="android.example.yeahscience.ui.spaceXInfo.SpaceXInfoFragment"
+        android:label="fragment_space_x_info"
+        tools:layout="@layout/fragment_space_x_info" >
+        <action
+            android:id="@+id/action_spaceXInfoFragment_to_spaceXRocketsFragment"
+            app:destination="@id/spaceXRocketsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ISSInfoFragment"
+        android:name="android.example.yeahscience.ui.issInfo.ISSInfoFragment"
+        android:label="ISS"
+        tools:layout="@layout/fragment_iss_info" />
+</navigation>

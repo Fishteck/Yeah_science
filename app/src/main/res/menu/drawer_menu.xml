@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/spaceXInfoFragment" android:title="SpaceX"/>
+    <item android:id="@+id/ISSInfoFragment" android:title="ISS"/>
+    <item android:id="@+id/drawer_nasa" android:title="NASA"/>
+</menu>
